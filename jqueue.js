@@ -32,9 +32,3 @@ dequeue() {
  return dequeuedNode;
 }
 }
-const q = new Queue();
-q.enqueue(4);
-q.enqueue(5);
-q.enqueue(8);
-q.dequeue();
-console.log(q.size);
