@@ -8,8 +8,9 @@ class Linked_list
 {
   constructor(){
     this.head = new node();
+    this.size = 0;
   }
-  insert(value){
+  append(value){
     if (this.head.data === undefined){
       this.head.data = value;
       return 0;
@@ -20,10 +21,11 @@ class Linked_list
     }
     headref.next = new node();
     headref.next.data = value;
+    this.size++;
   }
 }
 
 const ll = new Linked_list();
-ll.insert(4);
-ll.insert(5);
-console.log(ll.head.next.data);
+ll.append(4);
+ll.append(5);
+console.log(ll.head.data);
