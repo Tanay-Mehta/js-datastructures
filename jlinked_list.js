@@ -23,9 +23,28 @@ class Linked_list
     headref.next.data = value;
     this.size++;
   }
-}
+  reverse() {
+    // set a reference to head of linked list
+    if (this.head === null) return;
 
+    let currentNode = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    // traverse list and adjust links
+    while (currentNode) {
+        nextNode = currentNode.next;
+        currentNode.next = prevNode;
+        prevNode = currentNode;
+        currentNode = nextNode;
+        nextNode = null;
+    }
+    this.head = prevNode; // reset head
+    return this.head;
+}
+}
 const ll = new Linked_list();
 ll.append(4);
 ll.append(5);
-console.log(ll.head.data);
+ll.append(6);
+console.log(ll.reverse());
