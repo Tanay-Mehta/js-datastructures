@@ -24,14 +24,11 @@ class Linked_list
     this.size++;
   }
   reverse() {
-    // set a reference to head of linked list
     if (this.head === null) return;
 
     let currentNode = this.head;
     let prevNode = null;
     let nextNode = null;
-
-    // traverse list and adjust links
     while (currentNode) {
         nextNode = currentNode.next;
         currentNode.next = prevNode;
