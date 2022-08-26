@@ -6,12 +6,11 @@ function addEdge(adj,u,v)
 function printGraph(adj)
 {
     for (let i = 0; i < adj.length; i++) {
-            document.write("<br>Adjacency list of vertex" + i+"<br>");
-            document.write("head");
+            console.log(Adjacency list of vertex" + i);
+            console.log("head");
             for (let j = 0; j < adj[i].length; j++) {
                 document.write(" -> "+adj[i][j]);
             }
-            document.write("<br>");
         }
 }
         let V = 5;
